@@ -1,9 +1,9 @@
-# Stock / ETF Forecast Terminal
+# Stock / ETF / Mutual Fund Forecast Terminal
 
 A Bloomberg-styled Streamlit app that takes a stock or ETF ticker and shows:
 
 - **Pre-market**, **current**, and **post-market** prices
-- **1–5 day directional forecasts** with target price, % change, and confidence %
+- **1–90 day directional forecasts** with target price, % change, and confidence %
 - Historical price chart with the predicted path overlaid
 - Technical indicators (RSI, SMA crossover, momentum, composite signal)
 - 52-week high/low, volume, and average volume
