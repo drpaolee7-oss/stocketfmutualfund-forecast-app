@@ -2,7 +2,7 @@
 app.py
 ------
 Streamlit UI: enter a ticker, get a Bloomberg-styled dashboard with
-pre-market / current / post-market prices, 1..5 day directional forecasts,
+pre-market / current / post-market prices, 1..90 days directional forecasts,
 a historical+predicted chart, and a per-prediction CSV log.
 
 Run:
@@ -26,7 +26,7 @@ from predictor import PredictionResult, predict
 # Page config + theme
 # ---------------------------------------------------------------------------
 st.set_page_config(
-    page_title="TERMINAL // Stock & ETF Predictor",
+    page_title="TERMINAL // Stock / ETF / Mutual Fund Predictor",
     page_icon="📈",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -226,7 +226,7 @@ with st.sidebar:
     period = st.selectbox(
         "History window",
         ["3mo", "6mo", "1y", "2y"],
-        index=2,
+        index=0,
     )
     save_to_csv = st.checkbox("Log prediction to CSV", value=True)
 
@@ -234,7 +234,7 @@ with st.sidebar:
     st.markdown("**Watchlist**")
     watch_raw = st.text_area(
         "Comma-separated tickers",
-        value=st.session_state.get("watchlist", "AMA, SOXY, KLAG, ASMG"),
+        value=st.session_state.get("watchlist", "AMA, SOXY, KLAG, MRVU, ASMG"),
         height=80,
         label_visibility="collapsed",
     )
