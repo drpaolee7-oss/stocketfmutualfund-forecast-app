@@ -228,7 +228,7 @@ with st.sidebar:
         ["3mo", "6mo", "1y", "2y"],
         index=0,
     )
-    save_to_csv = st.checkbox("Log prediction to CSV", value=True)
+    save_to_csv = st.checkbox("Log prediction to CSV", value=False)
 
     st.markdown("---")
     st.markdown("**Watchlist**")
