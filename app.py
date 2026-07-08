@@ -234,7 +234,7 @@ with st.sidebar:
     st.markdown("**Watchlist**")
     watch_raw = st.text_area(
         "Comma-separated tickers",
-        value=st.session_state.get("watchlist", "AMA, GRAG, ORCS, BWET"),
+        value=st.session_state.get("watchlist", "BWET, AMA, KLAG"),
         height=80,
         label_visibility="collapsed",
     )
@@ -280,8 +280,8 @@ c_in, c_btn = st.columns([4, 1])
 with c_in:
     symbol = st.text_input(
         "ticker",
-        value=st.session_state.get("symbol", "AMA"),
-        placeholder="AMA",
+        value=st.session_state.get("symbol", "BWET"),
+        placeholder="BWET",
         label_visibility="collapsed",
         key="symbol_input",
     )
