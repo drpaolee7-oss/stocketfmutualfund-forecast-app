@@ -234,7 +234,8 @@ with st.sidebar:
     st.markdown("**Watchlist**")
     watch_raw = st.text_area(
         "Comma-separated tickers",
-        value=st.session_state.get("watchlist", "BWET, APLZ, DUST, AMA, KLAG, SPY, SPYM, QQQM, QQQ, SCHD, VEA, SCHF, VXUS, IXUS, IEFA, VOO, VDC"),
+        #value=st.session_state.get("watchlist", "BWET, APLZ, DUST, AMA, KLAG, SPY, SPYM, QQQM, QQQ, SCHD, VEA, SCHF, VXUS, IXUS, IEFA, VOO, VDC"),
+        value=st.session_state.get("watchlist", "BWET, SWTSX, FZROX, VTSAX, DIA, VYM, SDIV, DIV, SCHD, SPYD"),
         height=80,
         label_visibility="collapsed",
     )
